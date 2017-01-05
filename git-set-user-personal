@@ -1,0 +1,6 @@
+#!/bin/bash
+ssh-add -D
+ssh-add ~/.ssh/id_rsa_personal
+git config user.email marcelstaro@gmail.com
+git config user.name "Marcel Staro"
+git config core.sshCommand "ssh -i ~/.ssh/id_rsa_personal -F /dev/null"

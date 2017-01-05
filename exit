@@ -1,0 +1,12 @@
+#!/bin/sh
+
+exit_on_failure () {
+    if [[ $? -ne 0 ]]; then
+    echo ''
+    echo '*************************************'
+    echo '*** BUILD FAILED PLEASE TRY AGAIN ***'
+    echo '*************************************'
+    echo ''
+    exit 1
+    fi
+}

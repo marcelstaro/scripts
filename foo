@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#git reset --hard feature/SUNBTWOC-782
+git reset --hard MP
+git reset origin/develop
+
+for x in $(find . -name \*.scala); do
+    git checkout -- ../../$x
+    mv $x ../../$x
+    git mv ../../$x $x
+done
